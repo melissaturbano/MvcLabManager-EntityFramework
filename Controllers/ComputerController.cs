@@ -28,4 +28,19 @@ public class ComputerController : Controller
         }
         return View(computer);
      }
+
+     //DELETAR
+    public IActionResult Delete(int id)
+    {
+        Computer computer = _context.Computers.Find(id);
+
+        if(computer == null)
+        {
+            return NotFound();
+        }
+        _context.Computers.Remove(computer);
+        _context.SaveChanges();
+        return View(computer);
+        /*return RedirectToAction("Index");*/
+    }
 }
