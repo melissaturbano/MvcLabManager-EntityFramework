@@ -11,6 +11,7 @@ public class ComputerController : Controller
      {
         _context = context;
 
+
      }
 
      public IActionResult Index()
@@ -41,6 +42,45 @@ public class ComputerController : Controller
         _context.Computers.Remove(computer);
         _context.SaveChanges();
         return View(computer);
-        /*return RedirectToAction("Index");*/
     }
+
+    //ATUALIZAR
+    public IActionResult Update (int id, [FromForm] string ram, [FromForm] string processor)
+    {
+        Computer computer = _context.Computers.Find(id);
+
+        if(computer == null)
+        {
+            return NotFound();
+        }
+
+        _context.Computers.Update(computer);
+        _context.SaveChanges();
+
+        return View();
+    }
+
+    public IActionResult Create ([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
+    {
+        if (id != 0)
+        {
+            _context.Computers.Add(new Computer (id, ram, processor));
+            _context.SaveChanges();
+            
+        } 
+        return View();
+    }
+
+
+    /*public IActionResult Create(){   
+        return View();
+    }*/
+    
+   /* public IActionResult Create([FromForm] Computer computer)
+    {
+        _context.Computers.Add(computer);
+        _context.SaveChanges();
+        return RedirectToAction("Index");
+    }*/
+  
 }

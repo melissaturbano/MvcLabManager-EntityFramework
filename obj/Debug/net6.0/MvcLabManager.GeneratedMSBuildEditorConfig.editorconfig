@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\jrald\Downloads\SP3045013-Projeto\SP3045013\MvcLabManager
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/jrald/Downloads/SP3045013-Projeto/SP3045013/MvcLabManager/Views/Computer/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHV0ZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jrald/Downloads/SP3045013-Projeto/SP3045013/MvcLabManager/Views/Computer/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHV0ZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -25,6 +29,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/jrald/Downloads/SP3045013-Projeto/SP3045013/MvcLabManager/Views/Computer/Show.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHV0ZXJcU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jrald/Downloads/SP3045013-Projeto/SP3045013/MvcLabManager/Views/Computer/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHV0ZXJcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jrald/Downloads/SP3045013-Projeto/SP3045013/MvcLabManager/Views/Home/Index.cshtml]

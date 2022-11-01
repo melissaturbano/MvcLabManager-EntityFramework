@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Cadastrar Computador";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Utilize o formulário abaixo para cadastrar um novo computador!</p>
+
+    <form action="Create" method="post">
+        <p>
+            <label for="id"><strong>Id:</strong></label>
+            <input type="text" name="id" id="id" required>
+        </p>
+        <p>
+            <label for="ram"><strong>RAM: </strong></label>
+            <input type="text" name="ram" id="ram" required>
+        </p>
+          <p>
+            <label for="processor"><strong>Processador: </strong></label>
+            <input type="text" name="processor" id="processor" required>
+        </p>
+
+        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+    </form>
