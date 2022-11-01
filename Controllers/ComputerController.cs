@@ -58,8 +58,9 @@ public class ComputerController : Controller
         _context.SaveChanges();
 
         return View();
-    }
+    }*/
 
+    //CRIAR (adicionar)
     public IActionResult Create ([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
     {
         if (id != 0)
@@ -71,16 +72,5 @@ public class ComputerController : Controller
         return View();
     }
 
-
-    /*public IActionResult Create(){   
-        return View();
-    }*/
-    
-   /* public IActionResult Create([FromForm] Computer computer)
-    {
-        _context.Computers.Add(computer);
-        _context.SaveChanges();
-        return RedirectToAction("Index");
-    }*/
   
 }
