@@ -58,7 +58,7 @@ public class ComputerController : Controller
         _context.SaveChanges();
 
         return View();
-    }*/
+    }
 
     //CRIAR (adicionar)
     public IActionResult Create ([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
