@@ -45,7 +45,7 @@ public class ComputerController : Controller
     }
 
     //ATUALIZAR
-    public IActionResult Update (int id, [FromForm] string ram, [FromForm] string processor)
+    public IActionResult Update (int id)
     {
         Computer computer = _context.Computers.Find(id);
 
@@ -53,11 +53,24 @@ public class ComputerController : Controller
         {
             return NotFound();
         }
+        return View(computer);
+    }
 
+    [HttpPost]
+    public IActionResult Update(int id, [FromForm] string ram, [FromForm] string processor)
+    {
+        Computer computer = _context.Computers.Find(id);
+        if(computer == null)
+        {
+            return NotFound();
+        }
+        computer.Ram = ram;
+        computer.Processor = processor;
+        
         _context.Computers.Update(computer);
         _context.SaveChanges();
 
-        return View();
+        return RedirectToAction("Index");
     }
 
     //CRIAR (adicionar)

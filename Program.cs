@@ -8,7 +8,8 @@ builder.Services.AddControllersWithViews();
 
 //Configurando para pedir instância com esse modelo
 builder.Services.AddDbContext<LabManagerContext>(
-    options => options.UseMySQL("server=localhost;database=estudante;user=melissa;password=15186631841")
+    /*options => options.UseMySQL("server=localhost;database=estudante;user=melissa;password=15186631841")*/
+    options => options.UseMySQL("server=localhost;database=estudante;user=estudante;password=estudante")
 );
 
 var app = builder.Build();

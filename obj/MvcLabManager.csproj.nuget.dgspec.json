@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jrald\\Downloads\\SP3045013-Projeto\\SP3045013\\MvcLabManager\\MvcLabManager.csproj": {}
+    "/home/estudante/Documentos/MvcLabManager-EntityFramework/MvcLabManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jrald\\Downloads\\SP3045013-Projeto\\SP3045013\\MvcLabManager\\MvcLabManager.csproj": {
+    "/home/estudante/Documentos/MvcLabManager-EntityFramework/MvcLabManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jrald\\Downloads\\SP3045013-Projeto\\SP3045013\\MvcLabManager\\MvcLabManager.csproj",
+        "projectUniqueName": "/home/estudante/Documentos/MvcLabManager-EntityFramework/MvcLabManager.csproj",
         "projectName": "MvcLabManager",
-        "projectPath": "C:\\Users\\jrald\\Downloads\\SP3045013-Projeto\\SP3045013\\MvcLabManager\\MvcLabManager.csproj",
-        "packagesPath": "C:\\Users\\jrald\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jrald\\Downloads\\SP3045013-Projeto\\SP3045013\\MvcLabManager\\obj\\",
+        "projectPath": "/home/estudante/Documentos/MvcLabManager-EntityFramework/MvcLabManager.csproj",
+        "packagesPath": "/home/estudante/.nuget/packages/",
+        "outputPath": "/home/estudante/Documentos/MvcLabManager-EntityFramework/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jrald\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/estudante/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -49,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }

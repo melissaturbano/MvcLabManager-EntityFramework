@@ -45,7 +45,7 @@ public class LabController : Controller
     }
 
     //ATUALIZAR
-    public IActionResult Update (int id, [FromForm] int number, [FromForm] string name, [FromForm] string block)
+    public IActionResult Update (int id)
     {
         Lab lab = _context.Labs.Find(id);
 
@@ -53,11 +53,25 @@ public class LabController : Controller
         {
             return NotFound();
         }
-    
+        return View(lab);
+    }
+
+    [HttpPost]
+    public IActionResult Update(int id, [FromForm] int number, [FromForm] string name, [FromForm] string block)
+    {
+        Lab lab = _context.Labs.Find(id);
+        if(lab == null)
+        {
+            return NotFound();
+        }
+        lab.Number = number;
+        lab.Name = name;
+        lab.Block = block;
+        
         _context.Labs.Update(lab);
         _context.SaveChanges();
 
-        return View();
+        return RedirectToAction("Index");
     }
 
     //CRIAR (adicionar)
