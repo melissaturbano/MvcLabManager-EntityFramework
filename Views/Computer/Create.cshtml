@@ -5,7 +5,7 @@
 
 <p>Utilize o formulário abaixo para cadastrar um novo computador!</p>
 
-    <form action="Create" method="post">
+    <form method="post">
         <p>
             <label for="id"><strong>Id:</strong></label>
             <input type="text" name="id" id="id" required>
@@ -19,5 +19,5 @@
             <input type="text" name="processor" id="processor" required>
         </p>
 
-        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+        <button asp-controller="Computer" asp-action="Create" class="btn btn-outline-success">Cadastrar</button>
     </form>

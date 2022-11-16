@@ -7,19 +7,19 @@
 
 <p>Utilize o formulário abaixo para editar o computador!</p>
 
-    <form action="/Computer/Update/@Model.Id" method="post">
+    <form method="post">
         <p>
             <label for="id"><strong>Id:</strong></label>
-            <input type="text" name="id" id="id" value="@Model.Id" readonly>
+            <input asp-for="@Model.Id" readonly>
         </p>
         <p>
             <label for="ram"><strong>RAM: </strong></label>
-            <input type="text" name="ram" id="ram" value="@Model.Ram" required>
+            <input asp-for="@Model.Ram" required>
         </p>
           <p>
             <label for="processor"><strong>Processador: </strong></label>
-            <input type="text" name="processor" id="processor" value="@Model.Processor" required>
+            <input asp-for="@Model.Processor" required>
         </p>
        
-        <button type="submit" class="btn btn-outline-success">Atualizar</button>
+        <button asp-controller="Computer" asp-action="Update" class="btn btn-outline-success">Atualizar</button>
     </form>

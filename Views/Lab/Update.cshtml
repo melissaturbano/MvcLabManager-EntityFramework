@@ -7,23 +7,22 @@
 
 <p>Utilize o formulário abaixo para editar o laboratório!</p>
 
-    <form action="/Lab/Update/@Model.Id" method="post">
+    <form method="post">
         <p>
             <label for="id"><strong>Id:</strong></label>
-            <input type="text" name="id" id="id" value="@Model.Id" readonly>
-        </p>
+            <input asp-for="@Model.Id" readonly>        </p>
         <p>
             <label for="number"><strong>Número: </strong></label>
-            <input type="number" name="number" id="number" value="@Model.Number" required>
+            <input asp-for="@Model.Number" required>
         </p>
         <p>
             <label for="name"><strong>Nome: </strong></label>
-            <input type="text" name="name" id="name" value="@Model.Name" required>
+            <input asp-for="@Model.Name" required>
         </p>
         <p>
             <label for="block"><strong>Bloco: </strong></label>
-            <input type="text" name="block" id="block" value="@Model.Block" required>
+            <input asp-for="@Model.Block" required>
         </p>
        
-        <button type="submit" class="btn btn-outline-success">Atualizar</button>
+        <button asp-controller="Lab" asp-action="Update" class="btn btn-outline-success">Atualizar</button>
     </form>
