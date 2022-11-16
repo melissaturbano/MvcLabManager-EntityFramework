@@ -1,3 +1,5 @@
+@model MvcLabManager.Models.Lab
+
 @{
     ViewData["Title"] = "Cadastrar Laboratório";
 }
@@ -8,19 +10,23 @@
     <form method="post">
         <p>
             <label for="id"><strong>Id:</strong></label>
-            <input type="text" name="id" id="id" required>
+            <input type="text" name="id" id="id">
+            <span asp-validation-for="Id" class="text-danger" ></span>
         </p>
         <p>
             <label for="number"><strong>Número: </strong></label>
-            <input type="number" name="number" id="number" required>
+            <input type="number" name="number" id="number">
+            <span asp-validation-for="Number" class="text-danger" ></span>
         </p>
         <p>
             <label for="name"><strong>Nome: </strong></label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name">
+            <span asp-validation-for="Name" class="text-danger" ></span>
         </p>
          <p>
             <label for="block"><strong>Bloco: </strong></label>
-            <input type="text" name="block" id="block" required>
+            <input type="text" name="block" id="block">
+            <span asp-validation-for="Block" class="text-danger" ></span>
         </p>
        
         <button asp-controller="Lab" asp-action="Create" class="btn btn-outline-success">Cadastrar</button>

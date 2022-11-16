@@ -1,3 +1,5 @@
+@model MvcLabManager.Models.Computer
+
 @{
     ViewData["Title"] = "Cadastrar Computador";
 }
@@ -8,15 +10,18 @@
     <form method="post">
         <p>
             <label for="id"><strong>Id:</strong></label>
-            <input type="text" name="id" id="id" required>
+            <input type="text" name="id" id="id">
+            <span asp-validation-for="Id" class="text-danger" ></span>
         </p>
         <p>
             <label for="ram"><strong>RAM: </strong></label>
-            <input type="text" name="ram" id="ram" required>
+            <input type="text" name="ram" id="ram">
+            <span asp-validation-for="Ram" class="text-danger" ></span>
         </p>
           <p>
             <label for="processor"><strong>Processador: </strong></label>
-            <input type="text" name="processor" id="processor" required>
+            <input type="text" name="processor" id="processor">
+            <span asp-validation-for="Processor" class="text-danger" ></span>
         </p>
 
         <button asp-controller="Computer" asp-action="Create" class="btn btn-outline-success">Cadastrar</button>

@@ -75,15 +75,17 @@ public class LabController : Controller
     }
 
     //CRIAR (adicionar)
-    public IActionResult Create ([FromForm] int id, [FromForm] int number, [FromForm] string name, [FromForm] string block)
+    public IActionResult Create (Lab lab)
     {
-        if(id !=0) 
+        if(!ModelState.IsValid) 
         {
-             _context.Labs.Add(new Lab (id, number, name, block));
-            _context.SaveChanges();
+            return View(lab);
         }
        
-        return View();
+        _context.Labs.Add(lab);
+         _context.SaveChanges();
+
+         return RedirectToAction("Index");
     }
 }
 
